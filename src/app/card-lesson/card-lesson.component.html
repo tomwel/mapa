@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-lg-4" *ngFor="let lesson of lessonList">
+    <div class="card">
+      <div class="card-header bg-light">
+        <small class="text-muted">{{ lesson.title }}</small>
+        <div class="progress" style="height: 5px;">
+          <div class="progress-bar" role="progressbar" [style.width.%]="lesson.hasComplete" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="ex-tab-{{ lesson.id }}" data-toggle="tab" href="#ex-{{ lesson.id }}" role="tab" aria-controls="home" aria-selected="true">EXERCISES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="sit-tab-{{ lesson.id }}" data-toggle="tab" href="#sit-{{ lesson.id }}" role="tab" aria-controls="profile" aria-selected="false">SITUATIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="lcp-tab-{{ lesson.id }}" data-toggle="tab" href="#lcp-{{ lesson.id }}" role="tab" aria-controls="contact" aria-selected="false">LCP</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="lessonTabContent">
+          <div class="tab-pane fade show active" id="ex-{{ lesson.id }}" role="tabpanel" aria-labelledby="home-tab">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Section 1 <span class="badge badge-pill badge-info float-right">32</span></a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Section 2 <span class="badge badge-pill badge-info float-right">12</span></a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Section 3 <span class="badge badge-pill badge-info float-right">11</span></a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="sit-{{ lesson.id }}" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Situation 1</a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Situation 2</a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Situation 3</a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="lcp-{{ lesson.id }}" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> Exercise 1</a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> Exercise 2</a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> Exercise 3</a>
+              <a href="#" class="list-group-item list-group-item-action"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> Exercise 4</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- <a id="heading{{lesson.id}}" href="#" class="card-text" data-toggle="collapse" [attr.data-target]="'#collapse' + lesson.id"
+          aria-expanded="false" [attr.aria-controls]="'collapse' + lesson.id">{{ lesson.lessonSummary }}</a>
+        <div id="collapse{{lesson.id}}" class="collapse" [attr.aria-labelledby]="'headingOne' + lesson.id" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+       -->
+
+      </div>
+      <div class="card-footer">
+        <a [ngClass]="{disabled : !lesson.available}" class="btn btn-primary btn-sm btn-block" href="#">
+          <small>Go to the lesson</small>
+        </a>
+      </div>
+    </div>
+  </div>

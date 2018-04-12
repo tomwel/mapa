@@ -1,0 +1,20 @@
+.icon-status{
+    -webkit-box-shadow: 5px 5px 9px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 9px -5px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 9px -5px rgba(0,0,0,0.75);
+    width: 120px;
+    height: 120px;
+    font-size: 65px;
+    background-color: #04ce5e;
+    color: #fff;
+    border-radius: 120px;
+}
+
+.bedge-step{
+    position: absolute;
+    font-size: 17px;
+}
+
+.card-header{
+    font-weight:700;
+}
